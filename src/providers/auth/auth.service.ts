@@ -10,9 +10,7 @@ export class AuthService {
   constructor(
     public http: Http,
     public auth: AngularFireAuth
-  ) {
-    console.log('Hello AuthServiceProvider Provider');
-  }
+  ) { }
 
   public createAuthUser(user: { email: string, password: string }): firebase.Promise<FirebaseAuthState> {
     return this.auth.createUser(user);

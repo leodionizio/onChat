@@ -13,16 +13,20 @@ import { SignupPage } from './../pages/signup/signup';
 import { AuthService } from './../providers/auth/auth.service';
 import { UserService } from './../providers/user/user.service';
 
-import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 
-
-const firebaseAppConfig: FirebaseAppConfig = {
-  apiKey: "AIzaSyCZDwEUGXldx2kcjIYBmIlGfUP1bnRfd2I",
-  authDomain: "talkfly-5311c.firebaseapp.com",
-  databaseURL: "https://talkfly-5311c.firebaseio.com",
-  storageBucket: "talkfly-5311c.appspot.com",
-  messagingSenderId: "1093142937640"
-}
+// arquivo de configurações do firebase, que vc obtém através do seu console no próprio firebase
+// importado de outro arquivo restrito.
+import firebaseAppConfig from './firebase.config';
+//
+//ou pode ser declarado aqui seguindo o exemplo:
+// const firebaseAppConfig: FirebaseAppConfig = {
+//  apiKey: " /// ",
+//  authDomain: " /// ",
+//  databaseURL: " /// ",
+//  storageBucket: " /// ",
+//  messagingSenderId: " /// "
+// }
 
 @NgModule({
   declarations: [
@@ -47,7 +51,7 @@ const firebaseAppConfig: FirebaseAppConfig = {
     SplashScreen,
     UserService,
     AuthService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
-export class AppModule {}
+export class AppModule { }

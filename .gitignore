@@ -11,6 +11,8 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
+# objeto de conexão do app no firebase
+src/app/firebase.config.ts
 
 .idea/
 .sourcemaps/
