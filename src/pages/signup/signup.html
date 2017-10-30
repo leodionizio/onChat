@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <h1 text-center>
-    <ion-icon class="auth-icon" name="person-add" color="primary"></ion-icon>
+    <ion-icon class="auth-icon" name="person-add" color="dark"></ion-icon>
   </h1>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit(); $event.preventDefault()">
@@ -30,10 +30,10 @@
 
     <ion-item>
       <ion-label floating>Senha</ion-label>
-      <ion-input type="password" formControlName="pass"></ion-input>
+      <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
 
     <br>
-    <button ion-button block type="submit" [disabled]="!form.valid">Criar Conta</button>
+    <button ion-button block type="submit" [disabled]="!form.valid" color="dark">Criar Conta</button>
   </form>
 </ion-content>
