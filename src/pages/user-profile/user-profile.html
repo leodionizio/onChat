@@ -14,18 +14,18 @@
   <form (ngSubmit)="onSubmit($event)" *ngIf="canEdit" #profileForm="ngForm">
 
     <ion-item>
-      <ion-icon name="person" item-left></ion-icon>
+      <ion-icon name="person" class="primary" item-left></ion-icon>
       <ion-input type="text" placeholder="nome" name="name" [(ngModel)]="currentUser.name" required minlength="3" maxlength="25"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-icon name="at" item-left></ion-icon>
+      <ion-icon name="at" class="primary" item-left></ion-icon>
       <ion-input type="text" placeholder="usuario" name="username" [(ngModel)]="currentUser.username" required minlength="3" maxlength="15"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-icon name="image" item-left></ion-icon>
-      <input type="file" (change)="onPhoto($event)">
+      <ion-icon name="image" class="primary" item-left></ion-icon>
+      <input type="file" accept="image/*" (change)="onPhoto($event)">
     </ion-item>
 
     <br>

@@ -1,4 +1,3 @@
-import { HomePage } from './../pages/home/home';
 import { FirebaseAuthState } from 'angularfire2';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -9,6 +8,7 @@ import { User } from './../models/user.model';
 import { AuthService } from './../providers/auth/auth.service';
 import { UserService } from './../providers/user/user.service';
 
+import { HomePage } from './../pages/home/home';
 import { SigninPage } from './../pages/signin/signin';
 
 @Component({

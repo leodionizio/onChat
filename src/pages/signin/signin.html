@@ -11,14 +11,16 @@
   <h1 text-center>
     <img src="assets/images/onchat.png" width="200" alt="logo do aplicativo onchat">
   </h1>
-
+  <br>
   <form [formGroup]="form" (ngSubmit)="onSubmit(); $event.preventDefault()">
 
     <ion-item>
-      <ion-input type="email" formControlName="email" placeholder="email"></ion-input>
+        <ion-icon name="mail" class="primary" item-left></ion-icon>    
+        <ion-input type="email" formControlName="email" placeholder="email"></ion-input>
     </ion-item>
 
     <ion-item>
+      <ion-icon name="lock" class="primary" item-left></ion-icon>    
       <ion-input type="password" formControlName="password" placeholder="senha"></ion-input>
     </ion-item>
 

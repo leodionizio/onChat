@@ -10,7 +10,6 @@ import { NavController, MenuController } from 'ionic-angular';
 import { UserService } from './../../providers/user/user.service';
 import 'rxjs/add/operator/first';
 
-import { SignupPage } from './../signup/signup';
 import { User } from './../../models/user.model';
 
 import firebase from 'firebase'
