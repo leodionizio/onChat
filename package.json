@@ -1,8 +1,8 @@
 {
-  "name": "TalkFly",
+  "name": "Ichat",
   "version": "0.0.1",
   "author": "Leonardo Dionizio",
-  "homepage": "https://github.com/leodionizio",
+  "homepage": "https://leodionizio.github.io",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -36,5 +36,5 @@
     "@ionic/app-scripts": "3.0.0",
     "typescript": "2.3.4"
   },
-  "description": "Chat real time TalkFly"
+  "description": "Chat real time Ichat"
 }

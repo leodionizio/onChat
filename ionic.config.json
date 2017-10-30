@@ -1,6 +1,6 @@
 {
-  "name": "TalkFly",
-  "app_id": "",
+  "name": "Ichat",
+  "app_id": "br.com.leodionizio.ichat",
   "type": "ionic-angular",
   "integrations": {}
 }
