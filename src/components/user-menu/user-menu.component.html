@@ -1,0 +1,15 @@
+<ion-content>
+
+  <user-info [user]="currentUser" [isMenu]="true"></user-info>
+
+  <ion-list no-lines>
+    <button ion-item icon-left detail-none menuClose="user-menu" (click)="onProfile()">
+      <ion-icon name="person" item-start></ion-icon>
+      Perfil
+    </button>
+    <button ion-item icon-left detail-none menuClose="user-menu" (click)="onLogout()">
+      <ion-icon name="log-out" item-start></ion-icon>
+      Sair
+    </button>
+  </ion-list>
+</ion-content>
