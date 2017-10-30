@@ -1,16 +1,44 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      TalkFly
-    </ion-title>
-  </ion-navbar>
+  <custom-logged-header [title]="view | capitalize:true"></custom-logged-header>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="view">
+      <ion-segment-button value="chats">
+        chats
+      </ion-segment-button>
+      <ion-segment-button value="usuarios">
+        Usuários
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="filterItems($event)" aria-placeholder="Buscar..."></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list no-lines>
-    <button ion-item *ngFor="let user of users | async" (click)="onChatCreate(user)">
-      {{ user.name }}
-    </button>
-  </ion-list>
-  <button ion-button block (click)="onSignup()">Cadastrar</button>
+  <div [ngSwitch]="view">
+    <ion-list *ngSwitchCase="'chats'" no-lines>
+      <button ion-item *ngFor="let chat of chats | async" (click)="onChatOpen(chat)">
+        <ion-avatar item-start>
+          <img [src]="chat.photo || 'assets/images/no-photo.png'" alt="">
+        </ion-avatar>
+        <h2>{{ chat.title }}</h2>
+        <p *ngIf="chat.lastMessage; else customMessage">{{ chat.timestamp| date: 'dd/MM/yyyy H:mm'}} - {{ chat.lastMessage}}</p>
+        <ng-template #customMessage>
+          <p>Nenhuma mensagem</p>
+        </ng-template>
+      </button>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'usuarios'" no-lines>
+      <button ion-item *ngFor="let user of users | async" (click)="onChatCreate(user)">
+        <ion-avatar item-start>
+          <img [src]="user.photo || 'assets/images/no-photo.png'" alt="">
+        </ion-avatar>
+        {{ user.name }}
+      </button>
+    </ion-list>
+  </div>
 </ion-content>
