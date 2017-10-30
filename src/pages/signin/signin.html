@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Entrar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center>
+    <ion-icon class="auth-icon" name="chatboxes" color="dark"></ion-icon>
+  </h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit(); $event.preventDefault()">
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <br>
+    <button ion-button block type="submit" [disabled]="!form.valid" color="dark">Entrar</button>
+  </form>
+  <br>
+  <button ion-button full clear text-center (click)="onSignup()">Criar uma conta</button>
+</ion-content>
