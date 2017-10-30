@@ -1,5 +1,5 @@
 {
-  "name": "Ichat",
+  "name": "onChat",
   "version": "0.0.1",
   "author": "Leonardo Dionizio",
   "homepage": "https://leodionizio.github.io",
@@ -36,5 +36,5 @@
     "@ionic/app-scripts": "3.0.0",
     "typescript": "2.3.4"
   },
-  "description": "Chat real time Ichat"
+  "description": "Chat real time onChat"
 }

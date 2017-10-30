@@ -1,6 +1,6 @@
 {
-  "name": "Ichat",
-  "app_id": "br.com.leodionizio.ichat",
+  "name": "onChat",
+  "app_id": "br.com.leodionizio.onchat",
   "type": "ionic-angular",
   "integrations": {}
 }
