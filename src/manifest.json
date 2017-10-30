@@ -1,11 +1,11 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "onChat",
+  "short_name": "onChat",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "assets/imgs/logo.png",
-    "sizes": "512x512",
+    "src": "assets/images/onchat.png",
+    "sizes": "400x400",
     "type": "image/png"
   }],
   "background_color": "#4e8ef7",

@@ -1,11 +1,21 @@
-<ion-navbar>
+<ion-navbar color="primary">
 
   <button ion-button menuToggle="user-menu">
     <ion-icon name="menu"></ion-icon>
   </button>
 
   <ion-title>
+  <ion-item detail-none no-lines *ngIf="user else titleTemplate" color="transparent">
+    <ion-avatar item-left>
+      <img [src]="user.photo || 'assets/images/no-photo.png'" alt="">
+    </ion-avatar>
     {{ title }}
+  </ion-item>
+
+  <ng-template #titleTemplate>
+    {{ title }}
+  </ng-template>
+
   </ion-title>
 
 </ion-navbar>

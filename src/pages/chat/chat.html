@@ -1,6 +1,6 @@
 <ion-header>
 
-  <custom-logged-header [title]="pageTitle"></custom-logged-header>
+  <custom-logged-header [title]="pageTitle" [user]="recipient"></custom-logged-header>
 
 </ion-header>
 
@@ -15,7 +15,7 @@
   <ion-toolbar>
     <ion-item no-lines>
       <ion-input type="text" maxlength="50" placeholder="Mensagem..." (keyup.enter)="sendMessage(newMessage); newMessage=''" [(ngModel)]="newMessage"></ion-input>
-      <button ion-button item-right round color="success" (click)="sendMessage(newMessage); newMessage=''">
+      <button ion-button item-right round class="btn-send" (click)="sendMessage(newMessage); newMessage=''">
         <ion-icon name="md-send"></ion-icon>
       </button>
     </ion-item>
