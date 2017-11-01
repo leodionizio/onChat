@@ -15,7 +15,7 @@ import { SigninPage } from './../pages/signin/signin';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any;
+  rootPage: any = SigninPage;
   currentUser: User;
 
   constructor(
@@ -33,8 +33,6 @@ export class MyApp {
           .subscribe((user: User) => {
             this.currentUser = user;
           })
-      } else {
-        this.rootPage = SigninPage;
       }
     })
 
