@@ -31,7 +31,7 @@ export class SignupPage {
   ) {
     this.form = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(4)]],
-      user: ['', [Validators.required, Validators.minLength(4)]],
+      username: ['', [Validators.required, Validators.minLength(4)]],
       email: ['', [Validators.compose([Validators.required, Validators.pattern(regex.regexEmail)])]],
       password: ['', [Validators.required, Validators.minLength(4)]],
     })
@@ -67,7 +67,7 @@ export class SignupPage {
   public onSubmit(): void {
     let loading: Loading = this.showLoading('Aguarde...')
     let formUser = this.form.value;
-    let username: string = formUser.user;
+    let username: string = formUser.username;
 
     this.userService.userExists(username)
       .first()

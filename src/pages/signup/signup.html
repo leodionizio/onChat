@@ -15,22 +15,22 @@
   <form [formGroup]="form" (ngSubmit)="onSubmit(); $event.preventDefault()">
     <ion-item>
       <ion-icon name="person" class="primary" item-left></ion-icon>    
-      <ion-input type="text" formControlName="name"></ion-input>
+      <ion-input type="text" formControlName="name" placeholder="nome"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-icon name="at" class="primary" item-left></ion-icon>    
-      <ion-input type="text" formControlName="user"></ion-input>
+      <ion-input type="text" formControlName="username" placeholder="usuario"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-icon name="mail" class="primary" item-left></ion-icon>    
-      <ion-input type="email" formControlName="email"></ion-input>
+      <ion-input type="email" formControlName="email" placeholder="email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-icon name="lock" class="primary" item-left></ion-icon>    
-      <ion-input type="password" formControlName="password"></ion-input>
+      <ion-input type="password" formControlName="password" placeholder="senha"></ion-input>
     </ion-item>
 
     <br>
